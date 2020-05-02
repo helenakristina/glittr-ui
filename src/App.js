@@ -1,14 +1,28 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from './pages/home/index.tsx'
+import Signup from './pages/signup/index.tsx'
 
-function App() {
+export default function HomePage() {
   return (
-    <div className="App">
-      <header className="App-header">
-        Glittr
-      </header>
-    </div>
+    <Router>
+      <div>
+           <div><Link to="/">Home</Link></div> 
+           <div><Link to="/signup">Signup</Link></div>
+        <Switch>
+          <Route exact path="/" component={Home}>
+          </Route>
+          <Route path="/signup" component={Signup}>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+
