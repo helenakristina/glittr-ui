@@ -1,13 +1,9 @@
 import React from 'react';
 
-import Stripe from '../../components/index'
+import Stripe from '../../components/index';
 
 const Donate = () => {
-  return (
-
-        <Stripe />
- 
-  )
-}
+	return <Stripe />;
+};
 
 export default Donate;
