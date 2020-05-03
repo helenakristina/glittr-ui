@@ -24,7 +24,7 @@ export default function HomePage() {
         <Switch>
           <Route exact path="/" component={Home}></Route>
           <Route path="/signup" component={Signup}></Route>
-          <Route path="/donate" component={Donate}></Route/>
+          <Route path="/donate" component={Donate}></Route>
           <Route path="/login" component={Login}></Route>
           <Route path="/dashboard" component={Dashboard}></Route>
         </Switch>
