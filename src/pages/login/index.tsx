@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, FormEvent } from "react";
 import styled from 'styled-components';
 
 const Form = styled.form`
 display: flex;
 flex-direction: column;
 width: 30%;
-align-self: center;
+margin: 0 auto;
 `;
 
 const Login = () => {
@@ -14,14 +14,14 @@ const Login = () => {
     password: "",
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCreds({
       ...creds,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
   };
 
