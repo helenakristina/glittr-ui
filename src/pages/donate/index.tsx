@@ -1,9 +1,15 @@
 import React from 'react';
-
-import Stripe from '../../components/index';
+import Navigation  from '../../components/navigation'
+import Stripe from '../../components/stripe/index';
 
 const Donate = () => {
-	return <Stripe />;
+	return (
+  <>
+  
+  <Navigation/>
+  <Stripe />
+  </>
+  )
 };
 
 export default Donate;

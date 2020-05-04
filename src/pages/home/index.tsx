@@ -1,9 +1,6 @@
 import React from 'react';
-import {
-  NavLink
-} from "react-router-dom";
-import Scrollspy from 'react-scrollspy';
 import styled from 'styled-components';
+import Navigation  from '../../components/navigation'
 
 const Section = styled.section`
 	background-color: #282c34;
@@ -43,28 +40,7 @@ const NavItemLink = styled.a`
 const Home = () => {
 	return (
 		<>
-			<Nav>
-				<Scrollspy items={['section-1', 'section-2', 'section-3']} currentClassName="is-current">
-					<NavItem>
-						<NavItemLink href="#home">Home</NavItemLink>
-					</NavItem>
-					<NavItem>
-						<NavItemLink href="#about">About</NavItemLink>
-					</NavItem>
-					<NavItem>
-						<NavItemLink href="#parents">Parents</NavItemLink>
-					</NavItem>
-          <NavItem>
-            <NavItemLink>
-             <NavLink to="/login">Login</NavLink></NavItemLink>
-          </NavItem>
-          <NavItem>
-          <NavItemLink>
-            <NavLink to="/dashboard">Dashboard</NavLink>
-            </NavItemLink>
-          </NavItem>
-				</Scrollspy>
-			</Nav>
+			<Navigation/>
 			<div>
 				<Section id="home">
 					<h1>It's time to have fun!</h1>
