@@ -7,6 +7,7 @@ const Donate = () => {
 		<>
 			<Navigation />
 			<Stripe />
+		</>
 	);
 };
 

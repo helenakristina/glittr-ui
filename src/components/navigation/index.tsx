@@ -10,6 +10,7 @@ const Nav = styled.div`
 	overflow: auto;
 	white-space: nowrap;
 	display: flex;
+	z-index: 1;
 `;
 const NavItem = styled.div`
 	display: inline-flex;
@@ -50,19 +51,13 @@ const Navigation = () => {
 						<NavItemLink href="/#parents">Parents</NavItemLink>
 					</NavItem>
 					<NavItem className="navItem">
-						<NavItemLink>
-							<NavLink to="/donate">Donate</NavLink>
-						</NavItemLink>
+						<NavLink to="/donate">Donate</NavLink>
 					</NavItem>
 					<NavItem className="navItem">
-						<NavItemLink>
-							<NavLink to="/#contact">Contact</NavLink>
-						</NavItemLink>
+						<NavItemLink href="/#contact">Contact</NavItemLink>
 					</NavItem>
 					<NavItem className="navItem">
-						<NavItemLink>
-							<NavLink to="/login">Signup</NavLink>
-						</NavItemLink>
+						<NavLink to="/login">Signup</NavLink>
 					</NavItem>
 				</Scrollspy>
 			</Nav>
