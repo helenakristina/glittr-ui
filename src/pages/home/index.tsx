@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  Link
+} from "react-router-dom";
 import Scrollspy from 'react-scrollspy';
 import styled from 'styled-components';
 
@@ -50,6 +53,12 @@ const Home = () => {
 					<NavItem>
 						<NavItemLink href="#parents">Parents</NavItemLink>
 					</NavItem>
+          <NavItem>
+          <Link to="/login">Login</Link>
+          </NavItem>
+          <NavItem>
+          <Link to="/dashboard">Dashboard</Link>
+          </NavItem>
 				</Scrollspy>
 			</Nav>
 			<div>
