@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Navigation  from '../../components/navigation'
+import Navigation from '../../components/navigation';
 
 const Section = styled.section`
 	background-color: #282c34;
@@ -13,34 +13,10 @@ const Section = styled.section`
 	color: white;
 `;
 
-const Nav = styled.div`
-	position: sticky;
-	top: 0;
-	background: #fff;
-	overflow: auto;
-	white-space: nowrap;
-	display: flex;
-`;
-const NavItem = styled.div`
-	display: inline-flex;
-	margin: 0;
-	padding: 0;
-`;
-
-const NavItemLink = styled.a`
-	padding: 1rem;
-	color: #5500f0;
-	text-decoration: none;
-	transition: background 0.3s ease-in;
-	&:hover {
-		color: red;
-	}
-`;
-
 const Home = () => {
 	return (
 		<>
-			<Navigation/>
+			<Navigation />
 			<div>
 				<Section id="home">
 					<h1>It's time to have fun!</h1>
