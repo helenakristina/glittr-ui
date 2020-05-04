@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  Link
+  NavLink
 } from "react-router-dom";
 import Scrollspy from 'react-scrollspy';
 import styled from 'styled-components';
@@ -29,6 +29,7 @@ const NavItem = styled.div`
 	margin: 0;
 	padding: 0;
 `;
+
 const NavItemLink = styled.a`
 	padding: 1rem;
 	color: #5500f0;
@@ -54,10 +55,13 @@ const Home = () => {
 						<NavItemLink href="#parents">Parents</NavItemLink>
 					</NavItem>
           <NavItem>
-          <Link to="/login">Login</Link>
+            <NavItemLink>
+             <NavLink to="/login">Login</NavLink></NavItemLink>
           </NavItem>
           <NavItem>
-          <Link to="/dashboard">Dashboard</Link>
+          <NavItemLink>
+            <NavLink to="/dashboard">Dashboard</NavLink>
+            </NavItemLink>
           </NavItem>
 				</Scrollspy>
 			</Nav>
