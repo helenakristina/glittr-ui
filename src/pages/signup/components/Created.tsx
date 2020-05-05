@@ -2,9 +2,9 @@ import React from 'react'
 
 const Created = () => {
     return (
-        <div>
-            <h1>Account Created!</h1>
-            <button>Begin Exploring!</button>
+        <div className='onb-container'>
+            <h1 className='onb-heading'>Account Created!</h1>
+            <button className='onb-btn'>Begin Exploring!</button>
         </div>
     )
 }

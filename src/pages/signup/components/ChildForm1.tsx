@@ -10,13 +10,14 @@ const ChildForm1 = () => {
     }
 
     return (
-        <div>
-            <h1>Set a username and password that your child can log in with!</h1>
+        <div className='onb-container'>
+            <h1 className='onb-heading'>Set a username and password that your child can log in with!</h1>
             <form onSubmit={handleSubmit}>
                 <input />
                 <input />
                 <input />
-                <button>submit</button>
+                <br />
+                <button className='onb-btn'>submit</button>
             </form>
         </div>
     )

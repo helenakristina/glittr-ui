@@ -10,9 +10,9 @@ const Confirmed = () => {
     }
 
     return (
-        <div>
-            <h1>Email Confirmed!</h1>
-            <button onClick={routeToForm}>Create Profile</button>
+        <div className='onb-container'>
+            <h1 className='onb-heading'>Email Confirmed!</h1>
+            <button className='onb-btn' onClick={routeToForm}>Create Profile</button>
         </div>
     )
 }

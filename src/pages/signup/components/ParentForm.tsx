@@ -30,39 +30,48 @@ const ParentForm = () => {
     }
 
     return (
-        <div>
-            <h1>Almost there!</h1>
+        <div className='onb-container'>
+            <h1 className='onb-heading'>Almost there!</h1>
             <form onSubmit={handleSubmit}>
-
+                <label>Email Address:
+                    <input
+                        type='email'
+                        name='email'
+                        placeholder='jane@doe.com'
+                        value={info.email}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>Zip Code:
                 <input
-                    type='email'
-                    name='email'
-                    placeholder='Email Address'
-                    value={info.email}
-                    onChange={handleChange}
-                />
+                        type='text'
+                        name='zip_code'
+                        placeholder='Zip Code'
+                        value={info.zip_code}
+                        onChange={handleChange}
+                    />
+                </label>
+                <br />
+                <label>Password:
                 <input
-                    type='password'
-                    name='password_hash'
-                    placeholder='Password'
-                    value={info.password_hash}
-                    onChange={handleChange}
-                />
+                        type='password'
+                        name='password_hash'
+                        placeholder='Password'
+                        value={info.password_hash}
+                        onChange={handleChange}
+                    />
+                </label>
+                <label>Confirm Password:
                 <input
-                    type='password'
-                    name='confirm_password'
-                    placeholder='Confirm Password'
-                    value={pass}
-                    onChange={checkPassword}
-                />
-                <input
-                    type='text'
-                    name='zip_code'
-                    placeholder='Zip Code'
-                    value={info.zip_code}
-                    onChange={handleChange}
-                />
-                <button>submit</button>
+                        type='password'
+                        name='confirm_password'
+                        placeholder='Confirm Password'
+                        value={pass}
+                        onChange={checkPassword}
+                    />
+                </label>
+                <br />
+                <button className='onb-btn'>Submit</button>
             </form>
         </div>
     )

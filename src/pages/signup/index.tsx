@@ -6,11 +6,11 @@ const SignUp = () => {
   const history = useHistory();
 
   return (
-    <div>
-      <h2>Get a parent/guardian to help you sign up!</h2>
-      <div>
-        <button onClick={() => history.push("/child")}>I'm a kid</button>
-        <button onClick={() => history.push("/parent")}>I'm a parent</button>
+    <div className='onb-container'>
+      <h1 className='onb-heading'>Get a parent/guardian to help you sign up!</h1>
+      <div className='btn-container'>
+        <button className='onb-btn' onClick={() => history.push("/child")}>I'm a kid</button>
+        <button className='onb-btn' onClick={() => history.push("/parent")}>I'm a parent</button>
       </div>
     </div>
   )

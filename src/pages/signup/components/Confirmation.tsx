@@ -15,17 +15,18 @@ const Confirmation = () => {
     }
 
     return (
-        <div>
-            <h1>Check your email for the super secret security code</h1>
+        <div className='onb-container'>
+            <h1 className='onb-heading'>Check your email for the super secret security code</h1>
             <form onSubmit={handleSubmit}>
-                <input
+                <input className='txt-field'
                     type='number'
                     name='code'
                     placeholder='_ _ _ _'
                     value={code}
                     onChange={handleChange}
                 />
-                <button>Submit</button>
+                <br />
+                <button className='onb-btn'>Submit</button>
             </form>
 
         </div>
