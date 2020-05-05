@@ -33,8 +33,9 @@ const ParentForm = () => {
         <div className='onb-container'>
             <h1 className='onb-heading'>Almost there!</h1>
             <form onSubmit={handleSubmit}>
+
                 <label>Email Address:
-                    <input
+                    <input className='parent-field txt-field'
                         type='email'
                         name='email'
                         placeholder='jane@doe.com'
@@ -43,7 +44,7 @@ const ParentForm = () => {
                     />
                 </label>
                 <label>Zip Code:
-                <input
+                <input className='parent-field txt-field'
                         type='text'
                         name='zip_code'
                         placeholder='Zip Code'
@@ -53,7 +54,7 @@ const ParentForm = () => {
                 </label>
                 <br />
                 <label>Password:
-                <input
+                <input className='parent-field txt-field'
                         type='password'
                         name='password_hash'
                         placeholder='Password'
@@ -62,7 +63,7 @@ const ParentForm = () => {
                     />
                 </label>
                 <label>Confirm Password:
-                <input
+                <input className='parent-field txt-field'
                         type='password'
                         name='confirm_password'
                         placeholder='Confirm Password'
