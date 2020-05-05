@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FlippingCard, FlippingCardBack, FlippingCardFront } from 'react-ui-cards';
 import Lottie from 'react-lottie';
 import Stripe from '../../components/stripe/index';
