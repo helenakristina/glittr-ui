@@ -16,6 +16,10 @@ import Child from './pages/signup/components/Child'
 import Notice from './pages/signup/components/Notice'
 import ParentForm from './pages/signup/components/ParentForm'
 import Confirmation from './pages/signup/components/Confirmation'
+import Confirmed from './pages/signup/components/Confirmed'
+import ChildForm from './pages/signup/components/ChildForm'
+import ChildForm1 from './pages/signup/components/ChildForm1'
+import Created from './pages/signup/components/Created'
 
 export default function HomePage() {
   return (
@@ -37,6 +41,10 @@ export default function HomePage() {
           <Route path="/notice" component={Notice}></Route>
           <Route path="/parent-form" component={ParentForm}></Route>
           <Route path="/confirmation" component={Confirmation}></Route>
+          <Route path='/confirmed' component={Confirmed}></Route>
+          <Route path='/child-form' component={ChildForm}></Route>
+          <Route path='/child-form-01' component={ChildForm1}></Route>
+          <Route path='/created' component={Created}></Route>
         </Switch>
       </div>
     </Router>
