@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import Navigation from '../../components/navigation';
 
 const Section = styled.section`
-	background-color: #ffd800;
+	background-color: #ffd029;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -33,7 +33,7 @@ const Button = styled.button`
 	width: 200px;
 	height: 50px;
 	margin: 50px;
-	background: #4c2882;
+	background: #6d5495;
 	color: white;
 	font-size: 24px;
 `;
@@ -51,12 +51,16 @@ const Card = styled.div`
 	margin: 10px;
 	border-radius: 50px;
 	text-align: center;
-	background: #4c2882;
+	background: #6d5495;
 `;
 
 const Heading = styled.h1`
-	font-size: 100px;
-	text-shadow: 5px 5px gray;
+	font-size: 170px;
+	line-height: 192px;
+	letter-spacing: 0.06em;
+	color: #ffffff;
+	text-shadow: 14px 14px 8px #b18507;
+	margin: 10px;
 `;
 const defaultOptions = {
 	loop: true,
@@ -165,8 +169,7 @@ const Home = () => {
 				<Section id="contact">
 					<Container>
 						<InnerContainer>
-							<h1>Get in touch</h1>
-							<div> Have questions?</div>
+							<Heading>Questions?</Heading>
 							<Button>Learn more</Button>
 						</InnerContainer>
 						<InnerContainer>photos here</InnerContainer>
