@@ -6,26 +6,35 @@ import styled from 'styled-components';
 const Nav = styled.div`
 	position: sticky;
 	top: 0;
-	background: #fff;
+	background-color: #ffd800;
 	overflow: auto;
 	white-space: nowrap;
 	display: flex;
 	z-index: 1;
+	justify-content: space-between;
 `;
 const NavItem = styled.div`
 	display: inline-flex;
 	margin: 0;
 	padding: 0;
+	font-weight: 600;
+	color: white;
+	&:hover {
+		background: #4c2882;
+		border-radius: 50px;
+	}
 `;
 
 const NavItemLink = styled.a`
 	padding: 1rem;
-	color: #5500f0;
+	color: white;
 	text-decoration: none;
 	transition: background 0.3s ease-in;
-	&:hover {
-		color: red;
-	}
+`;
+
+const NavItemFloatRight = styled.div`
+	place-self: center;
+	margin: 20px;
 `;
 
 const Navigation = () => {
@@ -41,25 +50,25 @@ const Navigation = () => {
 					}}
 					offset={-50}
 				>
-					<NavItem className="navItem">
+					<NavItem>
 						<NavItemLink href="/#home">Home</NavItemLink>
 					</NavItem>
-					<NavItem className="navItem">
+					<NavItem>
 						<NavItemLink href="/#about">About</NavItemLink>
 					</NavItem>
-					<NavItem className="navItem">
+					<NavItem>
 						<NavItemLink href="/#parents">Parents</NavItemLink>
 					</NavItem>
-					<NavItem className="navItem">
-						<NavLink to="/donate">Donate</NavLink>
+					<NavItem>
+						<NavItemLink href="/#donate">Donate</NavItemLink>
 					</NavItem>
-					<NavItem className="navItem">
+					<NavItem>
 						<NavItemLink href="/#contact">Contact</NavItemLink>
 					</NavItem>
-					<NavItem className="navItem">
-						<NavLink to="/login">Signup</NavLink>
-					</NavItem>
 				</Scrollspy>
+				<NavItemFloatRight>
+					<NavLink to="/login">Sign in</NavLink>
+				</NavItemFloatRight>
 			</Nav>
 		</>
 	);

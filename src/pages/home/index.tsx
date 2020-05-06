@@ -7,14 +7,14 @@ import styled from 'styled-components';
 import Navigation from '../../components/navigation';
 
 const Section = styled.section`
-	background-color: white;
+	background-color: #ffd800;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
-	color: black;
+	color: white;
 `;
 const Container = styled.div`
 	display: flex;
@@ -30,9 +30,12 @@ const InnerContainer = styled.div`
 const Button = styled.button`
 	border-radius: 50px;
 	border: black 1px solid;
-	width: 150px;
+	width: 200px;
 	height: 50px;
 	margin: 50px;
+	background: #4c2882;
+	color: white;
+	font-size: 24px;
 `;
 
 const Cards = styled.div`
@@ -44,14 +47,17 @@ const Cards = styled.div`
 
 const Card = styled.div`
 	width: 95%;
-	height: 95%;
-	backgroundsize: contain;
-	border: 1px solid black;
+	height: 75%;
 	margin: 10px;
 	border-radius: 50px;
 	text-align: center;
+	background: #4c2882;
 `;
 
+const Heading = styled.h1`
+	font-size: 100px;
+	text-shadow: 5px 5px gray;
+`;
 const defaultOptions = {
 	loop: true,
 	autoplay: true,
@@ -69,7 +75,7 @@ const Home = () => {
 				<Section id="home">
 					<Container>
 						<InnerContainer>
-							<h1>It's time to have fun!</h1>
+							<Heading>Say hi to Glittr!</Heading>
 							<div> Dance, draw, act, and play.. ect.</div>
 							<Button>JOIN THE PARTY</Button>
 						</InnerContainer>
