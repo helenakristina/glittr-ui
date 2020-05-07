@@ -28,6 +28,7 @@ const Form = styled.form`
 		0px 1px 1.5px 0px rgba(0, 0, 0, 0.07);
 	border-radius: 7px;
 	padding: 40px;
+	background: white;
 `;
 
 const Button = styled.button`
@@ -52,17 +53,12 @@ export const StripeForm = () => {
 	const [error, setError] = useState<StripeError>();
 	const [isCardComplete, setIsCardComplete] = useState<boolean>(false);
 	const [isProcessing, setIsProcessing] = useState<boolean>(false);
-	const [billingDetails, setBillingDetails] = useState({
-		email: '',
-		phone: '',
-		name: '',
-	});
 	const [clientSecret, setClientSecret] = useState('');
 
 	useEffect(() => {
-		// Create PaymentIntent as soon as the page loads
+		// should update this to axios
 		window
-			.fetch('/create-payment-intent', {
+			.fetch('https://glittr-server.herokuapp.com/create-payment-intent/', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -84,26 +80,30 @@ export const StripeForm = () => {
 	const handleSubmit = async (event: FormEvent) => {
 		event.preventDefault();
 		const cardElement = elements!.getElement(CardElement);
-		if (!stripe || !elements) {
-			return;
+		if (cardElement) {
+			if (!stripe || !elements) {
+				return;
+			}
+
+			if (error && cardElement) {
+				cardElement.focus();
+				return;
+			}
+
+			if (isCardComplete) {
+				setIsProcessing(true);
+			}
+
+			const payload = await stripe.confirmCardPayment(clientSecret, {
+				payment_method: {
+					card: cardElement,
+					billing_details: {
+						name: 'Jenny Rosen',
+					},
+				},
+			});
+			setIsProcessing(false);
 		}
-
-		if (error && cardElement) {
-			cardElement.focus();
-			return;
-		}
-
-		if (isCardComplete) {
-			setIsProcessing(true);
-		}
-
-		const payload = await stripe.createPaymentMethod({
-			type: 'card',
-			card: cardElement!,
-			billing_details: billingDetails,
-		});
-
-		setIsProcessing(false);
 	};
 
 	return (

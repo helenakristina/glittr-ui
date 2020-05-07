@@ -1,13 +1,7 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
-import Home from './pages/home/index'
-import Signup from './pages/signup/index'
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Home from './pages/home/index';
+import Signup from './pages/signup/index';
 import Donate from './pages/donate/index'
 import Login from './pages/login/index.tsx'
 import Dashboard from './pages/dashboard/index.tsx'
@@ -22,16 +16,11 @@ import ChildForm1 from './pages/signup/components/ChildForm1'
 import Created from './pages/signup/components/Created'
 
 export default function HomePage() {
-  return (
-    <Router>
-      <div>
-        <div><Link to="/">Home</Link></div>
-        <div><Link to="/signup">Signup</Link></div>
-        <div><Link to="/donate">Donate Now</Link></div>
-        <div><Link to="/login">Login</Link></div>
-        <div><Link to="/dashboard">Dashboard</Link></div>
-        <Switch>
-          <Route exact path="/" component={Home}></Route>
+	return (
+		<Router>
+			<div>
+				<Switch>
+    			<Route exact path="/" component={Home}></Route>
           <Route path="/signup" component={Signup}></Route>
           <Route path="/donate" component={Donate}></Route>
           <Route path="/login" component={Login}></Route>
@@ -45,8 +34,8 @@ export default function HomePage() {
           <Route path='/child-form' component={ChildForm}></Route>
           <Route path='/child-form-01' component={ChildForm1}></Route>
           <Route path='/created' component={Created}></Route>
-        </Switch>
-      </div>
-    </Router>
-  );
+				</Switch>
+			</div>
+		</Router>
+	);
 }
