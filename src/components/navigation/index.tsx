@@ -1,26 +1,27 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import Scrollspy from 'react-scrollspy';
 import styled from 'styled-components';
 
 const Nav = styled.div`
 	position: sticky;
 	top: 0;
-	background-color: #ffd800;
+	font-weight: 600;
+	color: white;
+	background-color: #ffd029;
 	overflow: auto;
 	white-space: nowrap;
 	display: flex;
 	z-index: 1;
 	justify-content: space-between;
+	font-family: 'Poppins', sans-serif;
 `;
 const NavItem = styled.div`
 	display: inline-flex;
+	font-weight: 600;
 	margin: 0;
 	padding: 0;
-	font-weight: 600;
-	color: white;
 	&:hover {
-		background: #4c2882;
+		background: #6d5495;
 		border-radius: 50px;
 	}
 `;
@@ -67,7 +68,7 @@ const Navigation = () => {
 					</NavItem>
 				</Scrollspy>
 				<NavItemFloatRight>
-					<NavLink to="/login">Sign in</NavLink>
+					<NavItemLink href="/login">Sign in</NavItemLink>
 				</NavItemFloatRight>
 			</Nav>
 		</>

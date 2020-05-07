@@ -1,8 +1,9 @@
 import React from 'react';
 import { FlippingCard, FlippingCardBack, FlippingCardFront } from 'react-ui-cards';
-import Lottie from 'react-lottie';
+import Monster from '../../assets/img/monster.png';
+import Placeholder from '../../assets/img/placeholder.png';
+import Placeholder2 from '../../assets/img/placeholder2.png';
 import Stripe from '../../components/stripe/index';
-import animationData from './animation.json';
 import styled from 'styled-components';
 import Navigation from '../../components/navigation';
 
@@ -15,6 +16,7 @@ const Section = styled.section`
 	justify-content: center;
 	font-size: calc(10px + 2vmin);
 	color: white;
+	font-family: 'Poppins', sans-serif;
 `;
 const Container = styled.div`
 	display: flex;
@@ -25,6 +27,7 @@ const InnerContainer = styled.div`
 	width: 50%;
 	text-align: center;
 	position: relative;
+	place-self: center;
 `;
 
 const Button = styled.button`
@@ -58,18 +61,12 @@ const Heading = styled.h1`
 	font-size: 170px;
 	line-height: 192px;
 	letter-spacing: 0.06em;
+	font-weight: 600;
 	color: #ffffff;
 	text-shadow: 14px 14px 8px #b18507;
 	margin: 10px;
+	font-family: 'Chicle', cursive;
 `;
-const defaultOptions = {
-	loop: true,
-	autoplay: true,
-	animationData: animationData,
-	rendererSettings: {
-		preserveAspectRatio: 'xMidYMid slice',
-	},
-};
 
 const Home = () => {
 	return (
@@ -79,33 +76,65 @@ const Home = () => {
 				<Section id="home">
 					<Container>
 						<InnerContainer>
-							<Heading>Say hi to Glittr!</Heading>
+							<Heading>SAY HI TO GLITTR!</Heading>
 							<div> Dance, draw, act, and play.. ect.</div>
 							<Button>JOIN THE PARTY</Button>
 						</InnerContainer>
 						<InnerContainer>
-							<Lottie options={defaultOptions} height={400} width={400} />
+							<img src={Monster} />
 						</InnerContainer>
 					</Container>
 				</Section>
 				<Section id="about">
-					<h1>About</h1>
-					<iframe
-						width="900"
-						height="550"
-						src="https://www.youtube.com/embed/vY49eNceLBo"
-						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-					></iframe>
+					<Heading>HOW IT WORKS</Heading>
+					<Cards>
+						<FlippingCard>
+							<FlippingCardFront>
+								<Card>Create Profile</Card>
+							</FlippingCardFront>
+							<FlippingCardBack>
+								<Card></Card>
+							</FlippingCardBack>
+						</FlippingCard>
+						<FlippingCard>
+							<FlippingCardFront>
+								<Card>Watch videos and get creative</Card>
+							</FlippingCardFront>
+							<FlippingCardBack>
+								<Card></Card>
+							</FlippingCardBack>
+						</FlippingCard>
+						<FlippingCard>
+							<FlippingCardFront>
+								<Card>Watch videos and get creative</Card>
+							</FlippingCardFront>
+							<FlippingCardBack>
+								<Card></Card>
+							</FlippingCardBack>
+						</FlippingCard>
+					</Cards>
+				</Section>
+				<Section>
+					<img src={Placeholder} height={'700px'} />
+				</Section>
+				<Section>
+					<Container>
+						<InnerContainer>
+							<img src={Monster} />
+						</InnerContainer>
+						<InnerContainer>
+							<img src={Placeholder2} />
+						</InnerContainer>
+					</Container>
 				</Section>
 				<Section id="parents">
-					<h1>Parents</h1>
 					<Cards>
 						<FlippingCard>
 							<FlippingCardFront>
 								<Card>What is Glittr? What programs are offered?</Card>
 							</FlippingCardFront>
 							<FlippingCardBack>
-								<Card>More Details..</Card>
+								<Card></Card>
 							</FlippingCardBack>
 						</FlippingCard>
 						<FlippingCard>
@@ -113,7 +142,7 @@ const Home = () => {
 								<Card>How will my child benefit from this?</Card>
 							</FlippingCardFront>
 							<FlippingCardBack>
-								<Card>More Details..</Card>
+								<Card></Card>
 							</FlippingCardBack>
 						</FlippingCard>
 						<FlippingCard>
@@ -121,7 +150,7 @@ const Home = () => {
 								<Card>How much will it cost?</Card>
 							</FlippingCardFront>
 							<FlippingCardBack>
-								<Card>More Details..</Card>
+								<Card></Card>
 							</FlippingCardBack>
 						</FlippingCard>
 					</Cards>
@@ -133,7 +162,7 @@ const Home = () => {
 								</Card>
 							</FlippingCardFront>
 							<FlippingCardBack>
-								<Card>More Details..</Card>
+								<Card></Card>
 							</FlippingCardBack>
 						</FlippingCard>
 						<FlippingCard>
@@ -141,7 +170,7 @@ const Home = () => {
 								<Card>What is the time commitment?</Card>
 							</FlippingCardFront>
 							<FlippingCardBack>
-								<Card>More Details..</Card>
+								<Card></Card>
 							</FlippingCardBack>
 						</FlippingCard>
 						<FlippingCard>
@@ -149,7 +178,7 @@ const Home = () => {
 								<Card>How much parental invovement is required?</Card>
 							</FlippingCardFront>
 							<FlippingCardBack>
-								<Card>More Details..</Card>
+								<Card></Card>
 							</FlippingCardBack>
 						</FlippingCard>
 					</Cards>
@@ -158,7 +187,12 @@ const Home = () => {
 					<Container>
 						<InnerContainer>
 							<h1>Donate $10 to help a low income student get access to WiFi</h1>
-							<div> Each child deserves. ect.</div>
+							<div>
+								{' '}
+								Every child deserves a space to share their feelings and get creative, especially during
+								these stressful and isolating times. By donating $10 you can help one low income student
+								get access to our services!
+							</div>
 							<Button>Learn more</Button>
 						</InnerContainer>
 						<InnerContainer>
@@ -170,6 +204,10 @@ const Home = () => {
 					<Container>
 						<InnerContainer>
 							<Heading>Questions?</Heading>
+							<div>
+								Have questions or concerns? Please let us know! If you are interested in learning more
+								about our teacher workshops, please reach out for more info.{' '}
+							</div>
 							<Button>Learn more</Button>
 						</InnerContainer>
 						<InnerContainer>photos here</InnerContainer>
