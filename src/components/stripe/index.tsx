@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { StripeForm } from './stripe';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe } from '@stripe/stripe-js';
-const stripePromise = loadStripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
+const stripePromise = loadStripe('pk_test_W9IKXC26Ia8yxIHxAUHVLGJ900rkKNrxoP');
 
 const StripeContainer = styled.div`
 	width: 500px;
