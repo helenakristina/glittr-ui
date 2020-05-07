@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@300&display=swap');
+
+* {
+    font-family: 'Palanquin', sans-serif;
+}
+
+.onb-container {
+    border: 3px solid black;
+    margin: 5%;
+    padding: 5%;
+    height: 50vh;
+    text-align: center;
+}
+
+.onb-heading {
+    font-size: 300%;
+}
+
+.btn-container {
+    margin-top: 5%;
+}
+
+.onb-btn {
+    margin: 5%;
+    font-size: 120%;
+    background: grey;
+    border-radius: 30px;
+    padding: 0.5% 3%;
+}
+
+.link-btn {
+    text-decoration: none;
+    color: #000;
+}
+
+.parent {
+    margin: 3% 0 3% 2%;
+}
+
+.txt-field {
+    font-size: 100%;
+}
+
+.txt-field:hover {
+    border: 2px solid black;
+}
+
+.parent-field {
+    margin: 2%;
+}

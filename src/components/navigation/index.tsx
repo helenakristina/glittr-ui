@@ -68,7 +68,7 @@ const Navigation = () => {
 					</NavItem>
 				</Scrollspy>
 				<NavItemFloatRight>
-					<NavItemLink href="/login">Sign in</NavItemLink>
+					<NavItemLink href="/signup">Sign in</NavItemLink>
 				</NavItemFloatRight>
 			</Nav>
 		</>
