@@ -4,6 +4,10 @@ Glittr is an idea created by a team of female engineers and designers, brought t
 
 Women Hack The Crisis was a week-long hackathon in May of 2020. In this week, the team brainstormed, designed, and developed a prototype. After the hackathon, we decided to continue meeting and take Glittr on as a side project. It is currently in the early development stages, though we intend to build a full functioning platform.
 
+## Meet the Team
+
+<img src="./src/img/team.jpg" width="300">
+
 ## Deploy Link
 
 https://glittr-ui.herokuapp.com/
