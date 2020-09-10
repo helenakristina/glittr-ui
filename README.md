@@ -1,6 +1,8 @@
 ## Glittr
 
-Glittr is an idea created by a team of female engineers and designers, brought together by Women Hack the Crisis. Amidst the COVID-19 pandemic, parents are struggling to make ends meet for their families, and children have a lot of energy that can create additional stress during already difficult times. Our goal is to create a platform for children to express and release their creativity with others while maintaining social distancing.
+Glittr is an idea created by a team of female engineers and designers, brought together by Women Hack the Crisis. Amidst the COVID-19 pandemic, parents are struggling to make ends meet for their families, and children have a lot of energy that can create additional stress during already difficult times. Our goal is to create a wellness platform for children to learn, express and release their creativity with others while maintaining social distancing.
+
+Women Hack The Crisis was a week-long hackathon in May of 2020. In this week, the team brainstormed, designed, and developed a prototype. After the hackathon, we decided to continue meeting and take Glittr on as a side project. It is currently in the early development stages, though we intend to build a full functioning platform.
 
 ## Deploy Link
 
