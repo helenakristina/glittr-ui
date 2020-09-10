@@ -6,7 +6,7 @@ Women Hack The Crisis was a week-long hackathon in May of 2020. In this week, th
 
 ## Meet the Team
 
-<img src="./src/img/team.jpg" width="300">
+![zoom screenshot team photo](./src/img/team.JPG)
 
 ## Deploy Link
 
